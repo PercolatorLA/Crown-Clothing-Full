@@ -10,6 +10,7 @@ import {
   onAuthStateChanged,
 } from "firebase/auth";
 import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
+
 const firebaseConfig = {
   apiKey: "AIzaSyClP8ZZQ65l9gWSuEGWDnsJh2F7APHY1cw",
   authDomain: "registry-bank.firebaseapp.com",
@@ -80,9 +81,3 @@ export const signOutUser = async () => await signOut(auth);
 
 export const onAuthStateChangedListener = (callback) =>
   onAuthStateChanged(auth, callback);
-/**
- * {
- * next: callback,
- * error: errorCallback,
- * complete: completeCallback}
- */
